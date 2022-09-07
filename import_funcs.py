@@ -102,6 +102,7 @@ def create_ddb_dict(item: dict) -> dict:
                 ddb_dict[key] = {"BOOL": True}
             elif value == "FALSE":
                 ddb_dict[key] = {"BOOL": False}
+            #TODO: manage integer types
             else:
                 ddb_dict[key] = {"S": str(value)}
         if (key == "created") and (value == "none"):

@@ -1,6 +1,6 @@
 from typing import Optional
 
-from import_funcs import import_data_in_ddb, import_ddb_from_dict_json
+from import_funcs import import_ddb_from_ddb_json
 from export_funcs import export_ddb
 
 
@@ -13,7 +13,7 @@ def migrate(
         path=EXPORT_PATH, timestamp=True, db_name_export=db_name_export
     )
     # Import data into the import table
-    import_data_in_ddb(file_path=export_file_path, db_name_import=db_name_import)
+    import_ddb_from_ddb_json(file_path=export_file_path, db_name_import=db_name_import)
 
 
 migrate()
